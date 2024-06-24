@@ -1,8 +1,3 @@
-## en
-This is an unofficial build of the v2.0 and v2.1 branch of [LuaJIT](https://github.com/LuaJIT/LuaJIT) and the v2.1-agentzh branch of [openresty/luajit2](https://github.com/openresty/luajit2).
-
-As of 2023/12/05, only the build of the library for Winodws(x86/x64) is supported.
-
 ## ja
 [LuaJIT](https://github.com/LuaJIT/LuaJIT)のv2.1ブランチの非公式ビルドです。
 
