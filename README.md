@@ -3,7 +3,7 @@
 
 AviUtlでの利用を前提としてx86のみをビルドしています。
 
-## For AviUtl users
+## AviUtlで使う場合
 Releasesから`LuaJIT_2.1_Win_x86.zip`をダウンロードし、中身のlua51.dllを付属のものと置き換えてください。
 
 ## Special Thanks
