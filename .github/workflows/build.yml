@@ -97,3 +97,9 @@ jobs:
           RELEASE_NAME=Build-${{ steps.datetime.outputs.DATE_TIME }}
           TAG_NAME=build-${{ steps.datetime.outputs.DATE_TIME }}
           gh release create "$TAG_NAME" ${{ github.workspace }}/artifacts/*.zip --title "$RELEASE_NAME"
+
+      - name: Delete artifacts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api repos/${{ github.repository }}/actions/artifacts --paginate | jq '.artifacts[] | .id' | xargs -I {} gh api repos/${{ github.repository }}/actions/artifacts/{} -X DELETE
